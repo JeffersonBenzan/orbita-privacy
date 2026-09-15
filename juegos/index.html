@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Juegos de Jefferson Benzan</title>
+<meta name="description" content="ÓRBITA y Splat Stack: dos juegos de un toque para iPhone, sin anuncios ni compras.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;700&display=swap">
+<style>
+  :root{
+    --bg:#090A14; --card:#131A2E; --line:rgba(235,240,255,.10);
+    --ink:#EEF1FA; --muted:#98A2C0;
+    --teal:#3EDBC5; --gold:#FFC857; --pink:#FF7A9A;
+    --display:'Unbounded','Arial Black',sans-serif; --body:'Manrope',Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){ --bg:#F7F6F2; --card:#FFFFFF; --line:rgba(20,20,35,.10); --ink:#161A2B; --muted:#5A6180; --teal:#0E8E7C; --gold:#9A6B00; --pink:#C43E63; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  a{color:var(--teal)}
+  header{max-width:900px;margin:0 auto;padding:clamp(40px,8vw,90px) clamp(20px,5vw,40px) 10px}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 14px}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,6vw,54px);line-height:1.05;margin:0 0 16px;text-wrap:balance}
+  .lede{color:var(--muted);font-size:17px;line-height:1.65;max-width:54ch;margin:0}
+  main{max-width:900px;margin:0 auto;padding:30px clamp(20px,5vw,40px) 80px;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .game{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:14px}
+  .badge{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px}
+  .orb{background:linear-gradient(140deg,#1B2140,#0C1026);color:var(--teal);border:1px solid var(--line)}
+  .spl{background:linear-gradient(140deg,#3A2458,#1A1026);color:var(--gold);border:1px solid var(--line)}
+  h2{font-family:var(--display);font-weight:600;font-size:24px;margin:0}
+  .tag{font-size:13px;color:var(--muted);margin:0}
+  ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px;line-height:1.65}
+  .btn{margin-top:auto;display:inline-block;text-align:center;font-weight:700;padding:13px 20px;border-radius:999px;text-decoration:none}
+  .btn.on{background:var(--teal);color:#08131A}
+  .btn.off{background:transparent;color:var(--muted);border:1px solid var(--line);cursor:default}
+  .links{display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px}
+  footer{max-width:900px;margin:0 auto;padding:0 clamp(20px,5vw,40px) 60px;color:var(--muted);font-size:13px;line-height:1.7}
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Juegos para iPhone</p>
+  <h1>Dos juegos de un toque,<br>hechos en casa.</h1>
+  <p class="lede">Sin anuncios, sin cuentas y sin compras con dinero real. Se juegan con una mano y funcionan sin internet.</p>
+</header>
+<main>
+  <section class="game">
+    <div class="badge orb">Ó</div>
+    <h2>ÓRBITA</h2>
+    <p class="tag">Arcade espacial · 3 modos</p>
+    <ul>
+      <li>Clásico: suelta la cápsula en el ángulo justo.</li>
+      <li>Cinturones: esquiva asteroides dando vueltas al planeta.</li>
+      <li>Travesía: corre de frente, salta, rueda y viaja en hipervelocidad.</li>
+      <li>12 planetas, mapa de misiones y rankings de Game Center.</li>
+    </ul>
+    <div class="links"><a href="https://jeffersonbenzan.github.io/orbita-privacy/">Privacidad</a><a href="https://jeffersonbenzan.github.io/orbita-privacy/#support">Soporte</a></div>
+    <a class="btn on" href="https://apps.apple.com/app/id6810405604">Descargar en la App Store</a>
+  </section>
+  <section class="game">
+    <div class="badge spl">S</div>
+    <h2>Splat Stack</h2>
+    <p class="tag">Torre de gelatinas · un toque</p>
+    <ul>
+      <li>Suelta el bloque en el momento justo y encadena PERFECTOS.</li>
+      <li>Potenciadores, bloques dorados y tienda de mejoras.</li>
+      <li>Misiones por sectores, recompensa diaria y niveles.</li>
+      <li>Tablas de altura y puntuación en Game Center.</li>
+    </ul>
+    <div class="links"><a href="https://jeffersonbenzan.github.io/orbita-privacy/splat/">Privacidad</a><a href="https://jeffersonbenzan.github.io/orbita-privacy/splat/#support">Soporte</a></div>
+    <span class="btn off">Muy pronto en la App Store</span>
+  </section>
+</main>
+<footer>
+  Hechos por Jefferson Benzan Tapia · <a href="mailto:jeffersonbt20@gmail.com">jeffersonbt20@gmail.com</a>
+</footer>
+</body>
+</html>
