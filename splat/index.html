@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Splat Stack · Privacidad y soporte</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+  :root{
+    --bg:#140C1F; --surface:#21162F; --surface-2:#2B1E3C; --line:rgba(245,240,250,.10);
+    --ink:#F4F0FA; --muted:#B4A8C8; --faint:#8577A0;
+    --gold:#FFDE59; --mint:#8FDCA0; --pink:#FF7A9A;
+    --display:'Fredoka','Arial Rounded MT Bold',sans-serif;
+    --body:'Nunito','Helvetica Neue',Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#FFF8F0; --surface:#FFFFFF; --surface-2:#F6EDF7; --line:rgba(40,20,60,.10);
+      --ink:#2A1B3D; --muted:#655878; --faint:#958AA6;
+      --gold:#A67C00; --mint:#1F8A4C; --pink:#C23D63;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#FFF8F0; --surface:#FFFFFF; --surface-2:#F6EDF7; --line:rgba(40,20,60,.10);
+    --ink:#2A1B3D; --muted:#655878; --faint:#958AA6;
+    --gold:#A67C00; --mint:#1F8A4C; --pink:#C23D63;
+  }
+  :root[data-theme="dark"]{
+    --bg:#140C1F; --surface:#21162F; --surface-2:#2B1E3C; --line:rgba(245,240,250,.10);
+    --ink:#F4F0FA; --muted:#B4A8C8; --faint:#8577A0;
+    --gold:#FFDE59; --mint:#8FDCA0; --pink:#FF7A9A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  a{color:var(--mint)}
+  a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+  .top{display:flex;align-items:center;gap:12px;padding:16px clamp(20px,5vw,56px);border-bottom:1px solid var(--line)}
+  .blocks{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .blocks i{display:block;height:7px;border-radius:3px}
+  .blocks i:nth-child(1){width:14px;background:var(--mint)}
+  .blocks i:nth-child(2){width:20px;background:var(--gold)}
+  .blocks i:nth-child(3){width:26px;background:var(--pink)}
+  .name{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:.02em}
+  .top span{margin-left:auto;color:var(--muted);font-size:13px;font-weight:700}
+  main{max-width:740px;margin:0 auto;padding:clamp(28px,6vw,60px) clamp(20px,5vw,56px) 90px}
+  .eyebrow{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5.5vw,46px);line-height:1.08;margin:0 0 14px;text-wrap:balance}
+  .lede{color:var(--muted);font-size:17px;line-height:1.6;max-width:56ch;margin:0}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:30px 0 4px}
+  .stats div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .stats b{display:block;font-family:var(--display);font-size:26px;color:var(--gold);font-variant-numeric:tabular-nums}
+  .stats span{font-size:13px;color:var(--muted);line-height:1.4}
+  section{margin-top:48px}
+  h2{font-family:var(--display);font-weight:600;font-size:22px;margin:0 0 12px;text-wrap:balance}
+  p{font-size:16px;line-height:1.7;max-width:64ch;margin:0 0 12px}
+  .muted{color:var(--muted)}
+  .rows{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+  .row{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:12px 16px;border-top:1px solid var(--line)}
+  .row:first-child{border-top:0}
+  .row code{font-family:ui-monospace,'SF Mono',monospace;font-size:12.5px;color:var(--mint)}
+  .row span{font-size:14.5px;color:var(--muted);line-height:1.55}
+  ul{padding-left:20px;margin:0 0 12px}
+  li{font-size:15.5px;line-height:1.65;margin-bottom:6px;max-width:62ch}
+  .card{margin-top:48px;padding:24px;border-radius:20px;background:var(--surface);border:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+  .card h2{margin:0 0 4px}
+  .btn{font-weight:700;color:#1C1030;background:var(--gold);padding:12px 22px;border-radius:999px;text-decoration:none;white-space:nowrap}
+  .en{margin-top:56px;padding-top:24px;border-top:1px solid var(--line)}
+  footer{max-width:740px;margin:0 auto;padding:0 clamp(20px,5vw,56px) 40px;color:var(--faint);font-size:13px}
+  @media (max-width:560px){.stats{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="blocks" aria-hidden="true"><i></i><i></i><i></i></div><div class="name">SPLAT STACK</div><span>Privacidad y soporte</span></div>
+<main>
+  <p class="eyebrow">Actualizada el 15 de septiembre de 2026</p>
+  <h1>Tu torre vive en tu teléfono.</h1>
+  <p class="lede">Splat Stack no tiene servidores ni cuentas propias. Aquí está todo lo que el juego guarda y lo poco que comparte, solo con Apple y solo si tú usas Game Center o el botón Compartir.</p>
+  <div class="stats">
+    <div><b>0</b><span>servidores propios</span></div>
+    <div><b>5</b><span>archivos de juego guardados en tu dispositivo</span></div>
+    <div><b>1</b><span>servicio externo opcional: Game Center de Apple</span></div>
+  </div>
+
+  <section id="local">
+    <h2>Lo que se guarda en tu dispositivo</h2>
+    <p class="muted">Todo queda en el almacenamiento privado de la app. Nunca se envía a un servidor nuestro, porque no tenemos ninguno.</p>
+    <div class="rows">
+      <div class="row"><code>splat_best.save</code><span>Tu altura récord.</span></div>
+      <div class="row"><code>splat_stats.save</code><span>Partidas jugadas, bloques apilados y mejor combo.</span></div>
+      <div class="row"><code>splat_missions.save</code><span>Cuántas misiones has cumplido (desbloquea temas).</span></div>
+      <div class="row"><code>splat_progress.save</code><span>Gotas (moneda del juego, sin dinero real), mejoras compradas, impulsos, vidas extra, temas, nivel, mapa de misiones, racha de la recompensa diaria y si ya viste el tutorial.</span></div>
+      <div class="row"><code>splat_settings.save</code><span>Sonido, música, vibración, sacudida de cámara y tema elegido.</span></div>
+      <div class="row"><code>logs/godot.log</code><span>Registro técnico del motor del juego. No sale de tu teléfono salvo que tú toques "Copiar registro técnico" en Ajustes y lo pegues donde quieras.</span></div>
+    </div>
+    <p class="muted" style="margin-top:12px">Si borras la app, todo esto desaparece.</p>
+  </section>
+
+  <section id="game-center">
+    <h2>Game Center de Apple (opcional)</h2>
+    <p>Si tienes sesión en Game Center, el juego envía a Apple tu altura, tu puntuación y los logros que consigas, para mostrarlos en las tablas y en tu perfil. Apple trata esos datos con su propia política (<a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>). Nosotros no recibimos tu nombre, correo ni ningún dato de tu cuenta.</p>
+    <p class="muted">Puedes jugar sin Game Center: cierra sesión en Ajustes › Game Center y el juego funciona igual, solo sin tablas ni logros.</p>
+  </section>
+
+  <section id="phone">
+    <h2>Funciones del teléfono</h2>
+    <ul>
+      <li><b>Compartir:</b> al tocarlo, el juego dibuja una imagen de tu torre en tu propio teléfono y abre el menú de compartir de iOS. Tú eliges con quién. La imagen temporal queda en el almacenamiento de la app.</li>
+      <li><b>Vibración:</b> puedes apagarla en Ajustes.</li>
+      <li><b>Música:</b> viene incluida dentro de la app; no se descarga ni se transmite nada por internet.</li>
+    </ul>
+  </section>
+
+  <section id="not">
+    <h2>Lo que no hacemos</h2>
+    <ul>
+      <li>No hay anuncios, analíticas ni rastreo.</li>
+      <li>No hay compras con dinero real.</li>
+      <li>No pedimos ubicación, contactos, cámara ni micrófono.</li>
+      <li>No vendemos ni compartimos datos con terceros.</li>
+    </ul>
+    <p class="muted">Si una versión futura cambia algo de esto, esta página se actualizará antes de que llegue a la tienda.</p>
+  </section>
+
+  <section id="support">
+    <h2>Soporte</h2>
+    <p>¿Algo no funciona, perdiste tu progreso o tienes una idea? Escribe con tu modelo de iPhone y, si puedes, pega el texto de Ajustes › "Copiar registro técnico".</p>
+  </section>
+
+  <div class="card">
+    <div><h2>¿Preguntas?</h2><p class="muted" style="margin:0">Escribe directo al desarrollador, Jefferson Benzan Tapia.</p></div>
+    <a class="btn" href="mailto:jeffersonbt20@gmail.com">jeffersonbt20@gmail.com</a>
+  </div>
+
+  <div class="en" lang="en">
+    <h2>In English</h2>
+    <p class="muted">Splat Stack has no servers or accounts. Your progress (best height, stats, stardrops currency, upgrades, settings) is stored only on your device. If you use Apple Game Center, your height, score and achievements are sent to Apple under Apple's privacy policy. Sharing creates an image on your phone and opens the iOS share sheet. No ads, analytics, tracking or real-money purchases. Support: <a href="mailto:jeffersonbt20@gmail.com">jeffersonbt20@gmail.com</a>.</p>
+  </div>
+</main>
+<footer>Splat Stack · com.jefferson.splatstack · Jefferson Benzan Tapia</footer>
+</body>
+</html>
